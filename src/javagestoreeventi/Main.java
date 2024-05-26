@@ -1,6 +1,7 @@
 package javagestoreeventi;
 
 import java.time.LocalDate;
+import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 import java.util.Scanner;
 
@@ -27,7 +28,12 @@ public class Main {
 		int numeroPrenotazioni = s.nextInt();
 		
 		apex.prenota(numeroPrenotazioni);
-
+			
+		
+		
+		Concerto Marracash = new Concerto(titolo, dt, postiTotali, LocalTime.of(21,00,00), 50.00f );
+		
+		System.out.println(Marracash.toString());
 	}
 
 }

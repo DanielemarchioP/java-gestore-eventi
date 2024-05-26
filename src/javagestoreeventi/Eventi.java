@@ -34,9 +34,10 @@ public class Eventi {
 			System.out.print("non e possibile prenotare per l'evento scelto");
 		}
 	}
-	public void disdici() {
-		if(data.isAfter(LocalDate.now()) && postiPrenotati != 0 ) {
-			postiPrenotati --;
+	public void disdici(int numeroDisdette) {
+		if(data.isAfter(LocalDate.now()) && postiPrenotati >= numeroDisdette ) {
+			postiPrenotati = postiPrenotati - numeroDisdette;
+			System.out.println(" i posti prenotati sono " + postiPrenotati + "i posti totali per l'evento sono "+ postiTotali + "hai effettuato " + numeroDisdette + "  disdette");
 			
 		}else {
 			System.out.print("non e possibile disdire per l'evento scelto");
