@@ -24,6 +24,24 @@ public class Eventi {
 		
 	}
 	
+//	public void prenota(){
+//	if(data.isAfter(LocalDate.now()) && postiTotali > postiPrenotati {
+//		postiPrenotati ++;
+//		
+//		System.out.println(" i posti prenotati sono " + postiPrenotati + "i posti totali per l'evento sono "+ postiTotali");
+//		
+//	}else {
+//		System.out.print("non e possibile prenotare per l'evento scelto");
+//	}
+	
+//	public void disdici() {
+//		if(data.isAfter(LocalDate.now()) && postiPrenotati != 0){
+//			postiPrenotati --;
+//		} else {
+//			System.out.println("non e possibile disdire per l'evento scelto");
+//		}
+//	}
+	
 	public void prenota(int numeroPrenotazioni) {
 		if(data.isAfter(LocalDate.now()) && postiTotali > (postiPrenotati + numeroPrenotazioni)) {
 			postiPrenotati = postiPrenotati + numeroPrenotazioni;
