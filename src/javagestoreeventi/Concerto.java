@@ -20,10 +20,14 @@ public class Concerto extends Eventi {
 	
 	@Override
 	public String toString() {
-		DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy-MM-dd");
 		
+		if(data.isAfter(LocalDate.now())){
+		DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy-MM-dd");
 		return " l'ora del concerto e " + ora.toString() + " si terra in data " + dtf.format(getData()) + "al prezzo di : " + String.format("%.2f",prezzo) + " euro";
-	}
+		}else {
+			return "la data inserita non e valida";
+		}
+		}
 
 
 

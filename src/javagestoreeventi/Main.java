@@ -19,19 +19,38 @@ public class Main {
 		System.out.print("inserisci posti totali dell'evento ");
 		int postiTotali = s.nextInt();
 		
-		System.out.print(titolo + dt.toString() + postiTotali);
+		System.out.print("il titolo dell'evento scelto e " + titolo + " " + "la data scelta e " + " " + dt.toString() + " " + " i posti totali per l'evento sono" + " " + postiTotali);
 		
 		
 		Eventi apex = new Eventi(titolo,dt,postiTotali);
 		
-		System.out.print("Quante prenotazioni vuoi effettuare?");
-		int numeroPrenotazioni = s.nextInt();
 		
-		apex.prenota(numeroPrenotazioni);
-			
+		apex.prenota();
+		apex.disdici();
+		
+		
+		
+//		System.out.println("vuoi effettuare disdette?[ Y/N ]");
+//		String confermaDisdetta = s.nextLine();
+//		
+//		switch (confermaDisdetta) {
+//		
+//		case "Y":
+//			apex.disdici();
+//			break;
+//		case "N":
+//			System.out.println("non verranno effettuate disdette");
+//			break;
+//		}
+		
+		
 		
 		
 		Concerto Marracash = new Concerto(titolo, dt, postiTotali, LocalTime.of(21,00,00), 50.00f );
+		
+		Marracash.prenota();
+		
+		Marracash.disdici();
 		
 		System.out.println(Marracash.toString());
 	}
